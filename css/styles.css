@@ -40,11 +40,9 @@ h3 {
   position: relative;
 }
 .middle-container{
-  width: 50%;
   margin: 100px 0;
 }
 .bottom-container{
-  width: 50%;
   background-color:  #E2703A;
   padding: 50px 0 20px;
 }
