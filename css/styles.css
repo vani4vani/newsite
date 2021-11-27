@@ -4,11 +4,9 @@ font-family: 'merriweather', serif;
 text-align: center;
 color: #343434;
 }
-p{ font-size: 12;
+p{
     line-height: 2;
-}
-.footer-link {
-  font-size: 8;
+    font-size: 1;
 }
 h1 {
   font-size: 570%;
