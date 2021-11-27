@@ -7,6 +7,9 @@ color: #343434;
 p{ font-size: 12;
     line-height: 2;
 }
+.footer-link {
+  font-size: 8;
+}
 h1 {
   font-size: 570%;
   margin: 50px auto 0 auto;
