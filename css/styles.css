@@ -60,7 +60,7 @@ a:hover{
 }
 .skill-row{
   width: 50%;
-  margin: 100px auto 100px auto;
+  margin: 150px auto 100px auto;
   text-align: left;
 }
 .my-skills-img{
@@ -68,10 +68,11 @@ a:hover{
   float: left;
   margin-right: 30px;
 }
-.comet-img {
-  width: 50%;
+.diy-pic-img {
+  width: 30%;
   float: right;
   margin-left: 30px;
+
 }
 .contact-message{
   width: 20%;
@@ -79,11 +80,13 @@ a:hover{
 
 }
 hr {
+  clear: both;
   border: dotted 6px;
   border-bottom: none;
   color: lightgrey;
   width: 4%;
   margin: 100px auto;
+  margin-top: 100px;
 }
 .top-cloud{
   position: absolute;
