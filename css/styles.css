@@ -21,6 +21,7 @@ h1 {
 .intro{
   width: 30%;
   margin: auto;
+  font-size: medium;
 }
 h2 {
   font-family: 'Montserrat', sans-serif;
