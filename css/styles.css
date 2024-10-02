@@ -76,7 +76,7 @@ a:hover{
 
 .diy-pic-img {
   width: 70%;
-  float: right;
+  float: centre;
   margin-left: 20px;
   margin-bottom: 30px; /* Space below the DIY image */
 }
