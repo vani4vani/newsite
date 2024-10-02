@@ -2,213 +2,254 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Vani Bhatt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vani Bhatt - Data Scientist</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Light background for contrast */
-            color: #333; /* Dark text for readability */
+            background-color: #2b2b2b; /* Dark background */
+            color: #ffffff; /* White text */
         }
 
-        .top-container {
+        header {
+            background-color: #1c1c1c; /* Darker header */
             text-align: center;
-            padding: 40px 20px;
-            background-color: #e0f7fa; /* Light cyan */
-            position: relative; /* For absolute positioning of clouds */
-        }
-
-        .top-cloud, .bottom-cloud {
-            width: 100%;
-            max-width: 500px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            padding: 30px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         h1 {
-            font-size: 2.5em;
-            margin: 0.5em 0;
-            color: #00796b; /* Teal color */
+            font-size: 3em;
+            color: #00bcd4; /* Cyan color */
+            margin: 0;
         }
 
         h2 {
-            font-size: 1.8em;
-            color: #004d40; /* Darker teal color */
-            margin-bottom: 20px;
+            font-size: 2em;
+            color: #80deea; /* Light cyan */
+            margin: 0.5em 0;
         }
 
-        .middle-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .top-container {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
             padding: 20px;
         }
 
-        .profile {
+        .cloud {
+            width: 100%;
+            max-width: 600px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.5;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            margin-bottom: 40px;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        .fancy-frame-specific {
-            border: 5px solid #ccc; /* Gray border */
+        .fancy-frame {
+            border: 5px solid #ccc;
             padding: 10px;
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-            max-width: 400px; /* Resize image to be larger */
-            transition: transform 0.3s ease; /* Smooth hover effect */
-            margin: 20px auto; /* Center the image horizontally */
-            display: block; /* Ensure the div is treated as a block element */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            transition: transform 0.3s ease; /* Zoom on hover */
         }
 
-        .fancy-frame-specific:hover {
+        .fancy-frame:hover {
             transform: scale(1.05); /* Zoom in slightly on hover */
         }
 
-        .fancy-frame-specific img {
-            width: 100%; /* Ensure image fits within the fancy frame */
+        .fancy-frame img {
+            width: 100%;
             border-radius: 10px;
         }
 
         .skills {
-            margin-bottom: 40px;
+            margin: 20px 0;
         }
 
         .skill-row {
             display: flex;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
-            padding: 15px;
+            background-color: #424242;
             border-radius: 10px;
-            background-color: #ffffff; /* White background for skill rows */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+            margin: 10px 0;
+            padding: 15px;
             transition: background-color 0.3s, transform 0.3s;
+            position: relative; /* For tooltip positioning */
         }
 
         .skill-row:hover {
-            background-color: #f1f1f1; /* Light gray on hover */
-            transform: translateY(-2px); /* Lift effect */
+            background-color: #616161;
+            transform: translateY(-2px);
         }
 
-        .my-skills-img, .diy-pic-img {
-            width: 50px; /* Fixed width for icons */
-            height: 50px; /* Fixed height for icons */
-            margin-right: 20px; /* Space between icon and text */
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            z-index: 10;
         }
 
-        .contact-me {
-            text-align: center;
-            margin-bottom: 40px;
+        .skill-row:hover .tooltip {
+            display: block; /* Show tooltip on hover */
+        }
+
+        .my-skills-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
         }
 
         .btn {
-            background-color: #00796b; /* Teal color */
+            background-color: #00bcd4;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s;
+            font-size: 1.2em;
         }
 
         .btn:hover {
-            background-color: #004d40; /* Darker teal on hover */
+            background-color: #008ba3;
         }
 
-        .bottom-container {
+        footer {
             text-align: center;
             padding: 20px;
-            background-color: #e0f7fa; /* Light cyan */
+            background-color: #1c1c1c;
         }
 
         .footer-link {
+            color: #00bcd4;
             margin: 0 15px;
-            color: #00796b; /* Teal color */
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-link:hover {
-            color: #004d40; /* Darker teal on hover */
+            color: #80deea;
         }
 
         .copy-right {
             margin-top: 10px;
             font-size: 0.9em;
-            color: #666; /* Light gray */
+            color: #ccc;
         }
 
-        /* Responsive styles */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         @media (max-width: 768px) {
             h1 {
-                font-size: 2em; /* Smaller font size on mobile */
+                font-size: 2.5em;
             }
 
             h2 {
-                font-size: 1.5em; /* Smaller font size on mobile */
-            }
-
-            .middle-container {
-                padding: 10px;
+                font-size: 1.8em;
             }
 
             .skill-row {
-                flex-direction: column; /* Stack items on smaller screens */
-                align-items: flex-start; /* Align text to the left */
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
-    <div class="top-container">
-        <img class="top-cloud" src="images/cloud.png" alt="cloud image">
-        <h1>I'm Vani.</h1>
-        <h2>a <span class="pro"> pro</span>grammer.</h2>
-        <img class="bottom-cloud" src="images/cloud.png" alt="cloud image">
-        <img src="images/mountain.png" alt="mountain img" style="width: 100%; height: auto;">
+
+<header>
+    <h1>I'm Vani.</h1>
+    <h2>A Programmer & Data Scientist</h2>
+</header>
+
+<div class="top-container">
+    <img class="cloud" src="images/cloud.png" alt="cloud image">
+    <img class="cloud" src="images/cloud.png" alt="cloud image" style="top: 50px;">
+</div>
+
+<div class="content">
+    <div class="fancy-frame">
+        <img src="images/vani3.png" alt="Vani's Image">
     </div>
-    <div class="middle-container">
-        <div class="profile">
-            <div class="fancy-frame-specific">
-                <img src="images/vani3.png" alt="Vani's Image">
-            </div>
-            <h2>Hello.</h2>
-            <p class="intro">I am a Software Developer and also an experienced Apparel Designer. Hearty💛 and Passionate person.</p>
+    <h2>Hello.</h2>
+    <p>I am a Software Developer and also an experienced Apparel Designer. Hearty💛 and Passionate person.</p>
+
+    <h2>My Skills.</h2>
+    <div class="skills">
+        <div class="skill-row">
+            <img class="my-skills-img" src="images/skills1.png" alt="skill icon">
+            <h3>Design & Development</h3>
+            <div class="tooltip">Creative and innovative solutions</div>
         </div>
-        <hr>
-        <div class="skills">
-            <h2>My Skills.</h2>
-            <div class="skill-row">
-                <img class="my-skills-img" src="images/skills1.png" alt="skill icon">
-                <h3>Design & Development</h3>
-                <p>Adaptable and dynamic skilled professional with keen interest in Data Science, AI, and Application building.</p>
-            </div>
-            <div class="skill-row">
-                <img class="diy-pic-img" src="images/diy-pic.png" alt="DIY Icon">
-                <h3>Innovation Challenge</h3>
-                <p>But my best skill is doing innovations. I love doing innovative works. Building, modifying, or repairing things by oneself sounds like exercise for the mind.</p>
-            </div>
-        </div>
-        <hr>
-        <div class="contact-me">
-            <h2>Get In Touch</h2>
-            <h3>If you love doing innovations as much as I do.</h3>
-            <p class="contact-message">Love innovations as much as I do? Let's discuss it and see how creative we are!</p>
-            <a class="btn" href="mailto:bhattvani91@gmail.com">CONTACT ME</a>
+        <div class="skill-row">
+            <img class="my-skills-img" src="images/diy-pic.png" alt="DIY icon">
+            <h3>Innovation Challenge</h3>
+            <div class="tooltip">Building and modifying things</div>
         </div>
     </div>
 
-    <div class="bottom-container">
-        <p>
-            <a class="footer-link" href="https://www.linkedin.com/in/vani-bhatt-b8a69a79">LinkedIn</a>
-            <a class="footer-link" href="https://github.com/vani89570">GitHub for project collaborations</a>
-            <a class="footer-link" href="https://vani89570.github.io/mywebsite/">Website</a>
-        </p>
-        <p class="copy-right">© 2024 Vani Bhatt.</p>
+    <div class="contact-me">
+        <h2>Get In Touch</h2>
+        <p>If you love doing innovations as much as I do, let's discuss!</p>
+        <a class="btn" href="mailto:bhattvani91@gmail.com">CONTACT ME</a>
     </div>
+</div>
+
+<footer>
+    <p>
+        <a class="footer-link" href="https://www.linkedin.com/in/vani-bhatt-b8a69a79">LinkedIn</a>
+        <a class="footer-link" href="https://github.com/vani89570">GitHub</a>
+        <a class="footer-link" href="https://vani89570.github.io/mywebsite/">Website</a>
+    </p>
+    <p class="copy-right">© 2024 Vani Bhatt.</p>
+</footer>
+
+<script>
+    $(document).ready(function() {
+        // Smooth scroll for links
+        $('a[href^="#"]').on('click', function(event) {
+            const target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+
+        // Fade-in effect for content
+        $('.content').hide().fadeIn(1500);
+    });
+</script>
+
 </body>
 </html>
