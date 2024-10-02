@@ -19,7 +19,30 @@
     </div>
     <div class="middle-container">
       <div class="profile">
-        <img src="images/vani3.png" alt="vani's Image">
+<!--         <img src="images/vani3.png" alt="vani's Image"> -->
+        <style>
+  .fancy-frame-specific {
+    border: 5px solid #ccc; /* Gray border */
+    padding: 10px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    max-width: 200px; /* Resize image to be smaller */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+
+  .fancy-frame-specific:hover {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+  }
+
+  .fancy-frame-specific img {
+    width: 100%; /* Ensure image fits within the fancy frame */
+    border-radius: 10px;
+  }
+</style>
+
+<div class="fancy-frame-specific">
+  <img src="images/vani3.png" alt="vani's Image">
+</div>
         <h2>Hello.</h2>
         <p class="intro">I am a Software Developer and aslo an experienced Apparel Designer. Hearty💛 and Passionate person.</p>
       </div>
