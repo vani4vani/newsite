@@ -1,81 +1,214 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Vani Bhatt</title>
-    <link rel="stylesheet"type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light background for contrast */
+            color: #333; /* Dark text for readability */
+        }
 
-  </head>
-  <body>
+        .top-container {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #e0f7fa; /* Light cyan */
+            position: relative; /* For absolute positioning of clouds */
+        }
+
+        .top-cloud, .bottom-cloud {
+            width: 100%;
+            max-width: 500px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+            color: #00796b; /* Teal color */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #004d40; /* Darker teal color */
+            margin-bottom: 20px;
+        }
+
+        .middle-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .fancy-frame-specific {
+            border: 5px solid #ccc; /* Gray border */
+            padding: 10px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            max-width: 400px; /* Resize image to be larger */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+            margin: 20px auto; /* Center the image horizontally */
+            display: block; /* Ensure the div is treated as a block element */
+        }
+
+        .fancy-frame-specific:hover {
+            transform: scale(1.05); /* Zoom in slightly on hover */
+        }
+
+        .fancy-frame-specific img {
+            width: 100%; /* Ensure image fits within the fancy frame */
+            border-radius: 10px;
+        }
+
+        .skills {
+            margin-bottom: 40px;
+        }
+
+        .skill-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffffff; /* White background for skill rows */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .skill-row:hover {
+            background-color: #f1f1f1; /* Light gray on hover */
+            transform: translateY(-2px); /* Lift effect */
+        }
+
+        .my-skills-img, .diy-pic-img {
+            width: 50px; /* Fixed width for icons */
+            height: 50px; /* Fixed height for icons */
+            margin-right: 20px; /* Space between icon and text */
+        }
+
+        .contact-me {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background-color: #00796b; /* Teal color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #004d40; /* Darker teal on hover */
+        }
+
+        .bottom-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0f7fa; /* Light cyan */
+        }
+
+        .footer-link {
+            margin: 0 15px;
+            color: #00796b; /* Teal color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #004d40; /* Darker teal on hover */
+        }
+
+        .copy-right {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666; /* Light gray */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Smaller font size on mobile */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Smaller font size on mobile */
+            }
+
+            .middle-container {
+                padding: 10px;
+            }
+
+            .skill-row {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: flex-start; /* Align text to the left */
+            }
+        }
+    </style>
+</head>
+<body>
     <div class="top-container">
-      <img class="top-cloud" src="images\cloud.png" alt="cloud image">
-      <h1>I'm Vani.</h1>
-      <h2>a <span class="pro"> pro</span>grammer.</h2>
-      <img class="bottom-cloud"src="images\cloud.png" alt="cloud image">
-<!--         <img src="images\mountain.png" alt="mountain img"> -->
+        <img class="top-cloud" src="images/cloud.png" alt="cloud image">
+        <h1>I'm Vani.</h1>
+        <h2>a <span class="pro"> pro</span>grammer.</h2>
+        <img class="bottom-cloud" src="images/cloud.png" alt="cloud image">
         <img src="images/mountain.png" alt="mountain img" style="width: 100%; height: auto;">
     </div>
     <div class="middle-container">
-      <div class="profile">
-<!--         <img src="images/vani3.png" alt="vani's Image"> -->
-        <style>
-  .fancy-frame-specific {
-    border: 5px solid #ccc; /* Gray border */
-    padding: 10px;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    max-width: 400px; /* Resize image to be larger */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-    margin: 20px auto; /* Center the image horizontally */
-    display: block; /* Ensure the div is treated as a block element */
-  }
-
-  .fancy-frame-specific:hover {
-    transform: scale(1.05); /* Zoom in slightly on hover */
-  }
-
-  .fancy-frame-specific img {
-    width: 100%; /* Ensure image fits within the fancy frame */
-    border-radius: 10px;
-  }
-</style>
-        <h2>Hello.</h2>
-        <p class="intro">I am a Software Developer and aslo an experienced Apparel Designer. Hearty💛 and Passionate person.</p>
-      </div>
-      <hr>
-      <div class="skills">
-        <h2>My Skills.</h2>
-        <div class="skill-row">
-          <img class="my-skills-img" src="images\skills1.png" alt="skill icon">
-          <h3>Design & Development</h3>
-          <p>Adaptable and Dynamic skilled professional with keen interest in Data Science, AI and Application building. </p>
+        <div class="profile">
+            <div class="fancy-frame-specific">
+                <img src="images/vani3.png" alt="Vani's Image">
+            </div>
+            <h2>Hello.</h2>
+            <p class="intro">I am a Software Developer and also an experienced Apparel Designer. Hearty💛 and Passionate person.</p>
         </div>
-        <div class="skill-row ">
-          <img class="diy-pic-img" src="images\diy-pic.png">
-          <h3>Innovation Challenge</h3>
-          <p>But my best skill is doing Innovations. I love doing Innovative works. Building, modifying, or repairing things by oneself sounds like exercise for mind.</p>
+        <hr>
+        <div class="skills">
+            <h2>My Skills.</h2>
+            <div class="skill-row">
+                <img class="my-skills-img" src="images/skills1.png" alt="skill icon">
+                <h3>Design & Development</h3>
+                <p>Adaptable and dynamic skilled professional with keen interest in Data Science, AI, and Application building.</p>
+            </div>
+            <div class="skill-row">
+                <img class="diy-pic-img" src="images/diy-pic.png" alt="DIY Icon">
+                <h3>Innovation Challenge</h3>
+                <p>But my best skill is doing innovations. I love doing innovative works. Building, modifying, or repairing things by oneself sounds like exercise for the mind.</p>
+            </div>
         </div>
-      </div>
-      <hr>
-      <div class="contact-me">
-        <h2>Get In Touch</h2>
-        <h3>If you love doing innovations as much as I do.</h3>
-        <p class="contact-message">Love Innovations as much as I do? Let's discuss about it and see how creative we are!.</p>
-        <a class="btn" href="mailto:bhattvani91@gmail.com">CONTACT ME</a>
-      </div>
+        <hr>
+        <div class="contact-me">
+            <h2>Get In Touch</h2>
+            <h3>If you love doing innovations as much as I do.</h3>
+            <p class="contact-message">Love innovations as much as I do? Let's discuss it and see how creative we are!</p>
+            <a class="btn" href="mailto:bhattvani91@gmail.com">CONTACT ME</a>
+        </div>
     </div>
-
 
     <div class="bottom-container">
-      <p>
-      <a class="footer-link" href=" https://www.linkedin.com/in/vani-bhatt-b8a69a79">LinkedIn</a>
-      <a class="footer-link" href="https://github.com/vani89570">GitHub for project collaborations</a>
-      <a class="footer-link" href="https://vani89570.github.io/mywebsite/">Website</a>
-      </p>
-      <p class="copy-right">© 2024 Vani Bhatt.</p>
+        <p>
+            <a class="footer-link" href="https://www.linkedin.com/in/vani-bhatt-b8a69a79">LinkedIn</a>
+            <a class="footer-link" href="https://github.com/vani89570">GitHub for project collaborations</a>
+            <a class="footer-link" href="https://vani89570.github.io/mywebsite/">Website</a>
+        </p>
+        <p class="copy-right">© 2024 Vani Bhatt.</p>
     </div>
-
-  </body>
+</body>
 </html>
