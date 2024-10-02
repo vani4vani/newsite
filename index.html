@@ -3,78 +3,70 @@
 <head>
     <meta charset="utf-8">
     <title>Vani Bhatt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
-    <style>
-        .fancy-frame-specific {
-            border: 5px solid #ccc; /* Gray border */
-            padding: 10px;
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-            max-width: 400px; /* Resize image to be larger */
-            transition: transform 0.3s ease; /* Smooth hover effect */
-            margin: 20px auto; /* Center the image horizontally */
-            display: block; /* Ensure the div is treated as a block element */
-        }
-
-        .fancy-frame-specific:hover {
-            transform: scale(1.05); /* Zoom in slightly on hover */
-        }
-
-        .fancy-frame-specific img {
-            width: 100%; /* Ensure image fits within the fancy frame */
-            border-radius: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="top-container">
+    <div class="container-fluid top-container text-center p-5 bg-dark text-light">
         <img class="top-cloud" src="images/cloud.png" alt="cloud image">
-        <h1>I'm Vani.</h1>
-        <h2>a <span class="pro"> pro</span>grammer.</h2>
+        <h1 class="animate__animated animate__fadeIn">I'm Vani.</h1>
+        <h2>a <span class="pro">pro</span>grammer.</h2>
         <img class="bottom-cloud" src="images/cloud.png" alt="cloud image">
-        <img src="images/mountain.png" alt="mountain img" style="width: 100%; height: auto;">
+        <img src="images/mountain.png" class="img-fluid" alt="mountain img">
     </div>
-    <div class="middle-container">
+
+    <div class="container middle-container my-5">
         <div class="profile">
             <div class="fancy-frame-specific">
-                <img src="images/vani3.png" alt="Vani's Image">
+                <img src="images/vani3.png" alt="Vani's Image" class="img-fluid rounded">
             </div>
             <h2>Hello.</h2>
             <p class="intro">I am a Software Developer and also an experienced Apparel Designer. Hearty💛 and Passionate person.</p>
         </div>
+        
         <hr>
+        
         <div class="skills">
             <h2>My Skills.</h2>
-            <div class="skill-row">
-                <img class="my-skills-img" src="images/skills1.png" alt="skill icon">
-                <h3>Design & Development</h3>
-                <p>Adaptable and dynamic skilled professional with keen interest in Data Science, AI and Application building.</p>
-            </div>
-            <div class="skill-row">
-                <img class="diy-pic-img" src="images/diy-pic.png" alt="DIY Icon">
-                <h3>Innovation Challenge</h3>
-                <p>But my best skill is doing innovations. I love doing innovative works. Building, modifying, or repairing things by oneself sounds like exercise for the mind.</p>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img class="my-skills-img" src="images/skills1.png" alt="skill icon">
+                    <h3>Design & Development</h3>
+                    <p>Adaptable and dynamic skilled professional with keen interest in Data Science, AI and Application building.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img class="diy-pic-img" src="images/diy-pic.png" alt="DIY Icon">
+                    <h3>Innovation Challenge</h3>
+                    <p>But my best skill is doing innovations. I love doing innovative works. Building, modifying, or repairing things by oneself sounds like exercise for the mind.</p>
+                </div>
             </div>
         </div>
+        
         <hr>
-        <div class="contact-me">
+        
+        <div class="contact-me text-center">
             <h2>Get In Touch</h2>
             <h3>If you love doing innovations as much as I do.</h3>
             <p class="contact-message">Love innovations as much as I do? Let's discuss about it and see how creative we are!</p>
-            <a class="btn" href="mailto:bhattvani91@gmail.com">CONTACT ME</a>
+            <a class="btn btn-primary" href="mailto:bhattvani91@gmail.com">CONTACT ME</a>
         </div>
     </div>
 
-    <div class="bottom-container">
+    <div class="bottom-container bg-warning text-center p-3">
         <p>
-            <a class="footer-link" href="https://www.linkedin.com/in/vani-bhatt-b8a69a79">LinkedIn</a>
-            <a class="footer-link" href="https://github.com/vani89570">GitHub for project collaborations</a>
+            <a class="footer-link" href="https://www.linkedin.com/in/vani-bhatt-b8a69a79"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a class="footer-link" href="https://github.com/vani89570"><i class="fab fa-github"></i> GitHub</a>
             <a class="footer-link" href="https://vani89570.github.io/mywebsite/">Website</a>
         </p>
         <p class="copy-right">© 2024 Vani Bhatt.</p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
